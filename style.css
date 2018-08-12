@@ -18,12 +18,16 @@ img {
     clear: both;
 }
 
+
+
 /* Navbar */
 
 .navbar img {
     height: 25px;
     width: auto;
 }
+
+
 
 /* Header */
 
@@ -38,6 +42,9 @@ img {
     align-items: center;
     overflow: hidden;
 }
+.myName{
+    opacity: 0;
+}
 
 header h1 {
     font-size: 40px;
@@ -48,15 +55,23 @@ header h2 {
     margin-top: 0;
 }
 
+
+
 /* Featured Work */
 
 .featured-work {
     padding: 20px 0 20px;
 }
 
-.featured-work-heading {
+.featured-work-heading .aboutMe {
     margin-bottom: 20px;
     font-size: 40px;
+}
+
+.aboutMe__p {
+    line-height: 1.7;
+    letter-spacing: 1.5px;
+    margin-left: 20px;
 }
 
 .project-title {
@@ -83,22 +98,8 @@ header h2 {
     transition: all 0.3s ease-in-out;
 }
 
-.featured-work figure:hover figcaption {
-    left: 50%;
-    transform: translate(-50%, 50%);
-}
-
 .featured-work figure:hover img {
     transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
-}
-
-.featured-work figcaption {
-    position: absolute;
-    bottom: 50%;
-    font-size: 20px;
-    padding: 2px 8px;
-    left: -100%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -110,4 +111,70 @@ header h2 {
 .featured-work i:hover {
     opacity: 0.5;
     transition: all 0.3s ease-in-out;
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.list-icons {
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    font-size: 18px;
+}
+
+.space {
+    padding: 20px 0;
+}
+
+.social-links {
+    padding: 0;
+    list-style: none;
+    margin: 15px 0;
+}
+.featured-work figure:hover .cover {
+    height: 70%;
+}
+.cover {
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.description {
+    padding-top: 5px;
+    color: #fff;
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+    line-height: 6vw;
+    letter-spacing: 1.5px;
+}
+
+@media only screen and (min-width: 630px) and (max-width: 991px) {
+    .description {
+        font-size: 16px;
+        line-height: 7vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .description {
+        font-size: 14px;
+        line-height: 2;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+.main-photo {
+    background: url(images/main-photo-sm.jpg) center center fixed;
+}
 }
